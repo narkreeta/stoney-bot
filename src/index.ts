@@ -31,4 +31,6 @@ client.on("guildMemberRemove", async (member: GuildMember | PartialGuildMember) 
     }
 });
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN).then(() => {
+    console.log("Started.....")
+});
