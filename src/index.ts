@@ -4,6 +4,7 @@ import readyListener from "./listener/ready";
 import guildMemberAddListener from "./listener/guildMemberAdd";
 import guildMemberRemoveListener from "./listener/guildMemberRemove";
 import messageReactionAddListener from "./listener/ruleReaction";
+import commandListener from "./listener/commands";
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ readyListener(client);
 guildMemberAddListener(client);
 guildMemberRemoveListener(client);
 messageReactionAddListener(client)
+commandListener(client)
 
 // Login
 client.login(process.env.DISCORD_TOKEN).then(() => {
